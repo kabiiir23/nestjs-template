@@ -6,8 +6,10 @@ import { USER_REF } from '../../user/entities/user.entity';
 export type CompanyDocument = Company & Document;
 export type CompanyModel = Model<CompanyDocument>;
 export const COMPANY_REF = 'Company';
+export const COMPANY_COLL = 'nest-companies';
 
 @Schema({
+  collection: COMPANY_COLL,
   toJSON: {
     getters: true,
     virtuals: true,

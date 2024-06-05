@@ -10,8 +10,10 @@ import {
 export type UserDocument = User & Document;
 export type UserModel = Model<UserDocument>;
 export const USER_REF = 'User';
+export const USER_COLL = 'nest-users';
 
 @Schema({
+  collection: USER_COLL,
   toJSON: {
     getters: true,
     virtuals: true,
